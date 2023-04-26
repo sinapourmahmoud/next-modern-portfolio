@@ -4,7 +4,9 @@ import styles from "@/styles";
 const Hero = () => {
   return (
     <>
-      <section className={`2xl:max-w-[1280px] w-full mx-auto p-5 relative`}>
+      <section
+        className={`2xl:max-w-[1280px] w-full mx-auto p-5 relative z-20`}
+      >
         <div className="absolute gradient-01 w-[50%] z-10 top-0 left-0 h-[100%]" />
 
         <Header />
