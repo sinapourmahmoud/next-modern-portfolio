@@ -3,9 +3,12 @@
 import Info from "@/components/Info";
 import Title from "@/components/Title";
 import { startingFeatures } from "@/constants";
+import styles from "@/styles";
 
 const GetStarted = () => (
-  <section className="2xl:max-w-[1280px] w-full my-24 mx-auto   sm:px-16 px-6 flex flex-col md:flex-row gap-8 items-center">
+  <section
+    className={`2xl:max-w-[1280px] w-full my-24 mx-auto   sm:px-16 px-6 flex flex-col md:flex-row gap-8 items-center ${styles.xPaddings}`}
+  >
     <div className="flex-[1.2]">
       <img
         src="/get-started.png"
