@@ -5,7 +5,7 @@ import styles from "@/styles";
 
 const About = () => (
   <section className="2xl:max-w-[1280px] w-full mx-auto p-5">
-    <Title text="About Metaversus" />
+    <Title text="About Metaversus" customStyle="text-center" />
     <p className="mt-[8px] font-normal sm:text-[32px] text-[20px] md:px-6 text-center text-secondary-white">
       <span className="font-extrabold text-white">Metaverse</span> is a new
       thing in the future, where you can enjoy the virtual world by feeling like
