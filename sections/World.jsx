@@ -4,7 +4,7 @@ import Title from "@/components/Title";
 import styles from "@/styles";
 
 const World = () => (
-  <section className="2xl:max-w-[1280px] w-full  mx-auto my-44   sm:px-16 px-6 ">
+  <section className="2xl:max-w-[1280px] w-full  mx-auto my-44 relative   sm:px-16 px-6 ">
     <Title text="People on the World" customStyle=" text-center text-base" />
     <h2
       className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white text-center ${styles.xPaddings}`}
@@ -12,7 +12,7 @@ const World = () => (
       Track friends around you and invite them to play together in the same
       world
     </h2>
-    <div className="w-full relative">
+    <div className="w-full relative mt-10">
       <img
         src="/people-01.png"
         alt="person"
