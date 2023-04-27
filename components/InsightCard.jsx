@@ -1,12 +1,18 @@
 import React from "react";
-
-const InsightCard = ({ imgUrl, title, subtitle }) => {
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
+const InsightCard = ({ imgUrl, title, subtitle, index }) => {
   return (
-    <div className="flex  flex-col md:flex-row md:items-center gap-24">
+    <motion.div
+      className="flex  flex-col md:flex-row md:items-center gap-24"
+      variants={fadeIn("up", "tween", index * 0.1, 0.6)}
+      initial="hidden"
+      whileInView="show"
+    >
       <img
         src={imgUrl}
         alt="insight"
-        className="w-full md:w-[250px] h-[270px] rounded-3xl object-cover"
+        className="w-full md:w-[260px] h-[270px] rounded-3xl object-cover"
       />
       <div className="max-w-[750px] ">
         <h4 className="font-normal lg:text-[42px] text-[26px] text-white">
@@ -21,7 +27,7 @@ const InsightCard = ({ imgUrl, title, subtitle }) => {
       <div className="rounded-full border border-white p-8  items-center justify-center hidden md:flex">
         <img src="/arrow.svg" alt="arrow" className="w-10" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

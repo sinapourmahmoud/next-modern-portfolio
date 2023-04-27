@@ -4,12 +4,19 @@ import NewsCard from "@/components/NewsCard";
 import Title from "@/components/Title";
 import { newFeatures } from "@/constants";
 import styles from "@/styles";
+import { motion } from "framer-motion";
+import { fadeIn, planetVariants } from "@/utils/motion";
 
 const WhatsNew = () => (
   <section
     className={`2xl:max-w-[1280px] w-full  mx-auto   sm:px-16 px-6 flex flex-col md:flex-row gap-6 items-center ${styles.xPaddings}`}
   >
-    <div className="flex flex-col gap-9 flex-[1.2]">
+    <motion.div
+      className="flex flex-col gap-9 flex-[1.2]"
+      variants={fadeIn("right", "tween", 0.2, 1.8)}
+      initial="hidden"
+      whileInView="show"
+    >
       <Title text="How Metaversus Works" />
       <h2 className="font-bold md:text-[64px] text-[40px] text-white ">
         What's new about Metaversus?
@@ -19,12 +26,15 @@ const WhatsNew = () => (
           <NewsCard key={index} {...item} />
         ))}
       </div>
-    </div>
+    </motion.div>
     <div className="flex-1">
-      <img
+      <motion.img
         src="/whats-new.png"
         alt="circle"
         className="lg:w-[80%] w-[90%] text-center"
+        variants={planetVariants("right")}
+        initial="hidden"
+        whileInView="show"
       />
     </div>
   </section>

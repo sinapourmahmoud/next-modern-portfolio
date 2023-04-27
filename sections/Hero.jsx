@@ -1,6 +1,7 @@
 "use client";
 import Header from "@/components/Header";
-import styles from "@/styles";
+import { textVariant, slideIn } from "@/utils/motion";
+import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <>
@@ -13,10 +14,20 @@ const Hero = () => {
       </section>
       <div className="flex flex-col my-12">
         <div className="flex flex-col items-center relative z-10">
-          <h1 className="font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white">
+          <motion.h1
+            variants={textVariant(1)}
+            initial="hidden"
+            whileInView="show"
+            className="font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white"
+          >
             METAVERSE
-          </h1>
-          <div className="flex items-center">
+          </motion.h1>
+          <motion.div
+            variants={textVariant(1.6)}
+            initial="hidden"
+            whileInView="show"
+            className="flex items-center"
+          >
             <h1 className="font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white">
               MA
             </h1>
@@ -24,23 +35,28 @@ const Hero = () => {
             <h1 className="font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white">
               NESS
             </h1>
-          </div>
+          </motion.div>
         </div>
-        <div className="flex flex-col pl-16  sm:pl-40 -mt-10 ">
+        <motion.div
+          variants={slideIn("right", "tween", 0, 1.1)}
+          initial="hidden"
+          whileInView="show"
+          className="flex flex-col pl-16  sm:pl-40 -mt-10 "
+        >
           <div className="w-full h-40 hero-gradient rounded-tl-[130px]" />
           <img
             src="/cover.png"
             alt="hero"
             className="w-full h-[70vh] object-cover rounded-tl-[130px] -mt-32"
           />
-        </div>
-        <a href="#explore">
-          <img
-            src="/stamp.png"
-            alt="circle"
-            className="w-[95px] object-contain cursor-pointer  ml-auto mr-5 md:mr-9 md:w-[125px]  -mt-10"
-          />
-        </a>
+          <a href="#explore">
+            <img
+              src="/stamp.png"
+              alt="circle"
+              className="w-[95px] object-contain cursor-pointer  ml-auto mr-5 md:mr-9 md:w-[125px]  -mt-10"
+            />
+          </a>
+        </motion.div>
       </div>
     </>
   );

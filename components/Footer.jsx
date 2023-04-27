@@ -1,10 +1,14 @@
 import { socials } from "@/constants";
 import styles from "@/styles";
 import React from "react";
-
+import { motion } from "framer-motion";
+import { footerVariants } from "@/utils/motion";
 const Footer = () => {
   return (
-    <footer
+    <motion.footer
+      variants={footerVariants}
+      initial="hidden"
+      whileInView="show"
       className={`2xl:max-w-[1280px] w-full my-8 mx-auto  sm:px-16 px-6 ${styles.xPaddings} relative`}
     >
       <div className="footer-gradient " />
@@ -33,7 +37,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

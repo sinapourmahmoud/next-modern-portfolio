@@ -1,8 +1,12 @@
 import React from "react";
-
-const Card = ({ id, imgUrl, title, selected, setSelected }) => {
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
+const Card = ({ id, imgUrl, title, selected, setSelected, index }) => {
   return (
-    <div
+    <motion.div
+      variants={fadeIn("right", "spring", index * 0.5, 0.4)}
+      initial="hidden"
+      whileInView="show"
       onClick={() => {
         setSelected(id);
       }}
@@ -32,7 +36,7 @@ const Card = ({ id, imgUrl, title, selected, setSelected }) => {
           {title}
         </p>
       )}
-    </div>
+    </motion.div>
   );
 };
 
