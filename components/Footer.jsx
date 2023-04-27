@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="flex flex-col gap-5 md:justify-between md:items-center md:flex-row">
         <h4 className="font-extrabold text-[24px] text-white">METAVERUS</h4>
         <p className="font-normal text-[14px] text-white opacity-50">
-          Copyright © 2021 - 2022 Metaversus. All rights reserved.
+          Copyright © 2021 - 2022 sina Pourmahmoud. All rights reserved.
         </p>
         <div className="flex items-center gap-3">
           {socials.map((item, index) => (
