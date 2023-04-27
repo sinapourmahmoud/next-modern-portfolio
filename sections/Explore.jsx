@@ -10,7 +10,7 @@ const Explore = () => {
   const [selected, setSelected] = useState("world-1");
   return (
     <section
-      className={`2xl:max-w-[1280px] w-full my-8 mx-auto  sm:px-16 px-6 ${styles.xPaddings}`}
+      className={`2xl:max-w-[1280px] w-full  mx-auto my-44 sm:px-16 px-6 ${styles.xPaddings}`}
     >
       <Title text="The World" customStyle="text-center" />
       <h1 className="mt-[8px] font-bold md:text-[64px] text-[40px] text-white text-center my-7">
